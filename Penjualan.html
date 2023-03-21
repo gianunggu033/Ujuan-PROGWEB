@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gian Unggu</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Menu Utama</a> |
+        <a href="Penjualan.html">Penjualan</a> |
+        <a href="about me.html">Tentang Saya</a>
+    </nav>
+
+	<div class="container">
+		<h2>Form Pemjualan</h2>
+		<table border="1">
+			<tr>
+				<th>No </th>
+				<th>Nama Barang</th>
+				<th>Harga Barang</th>
+				<th>Jumlah Barang</th>
+			</tr>
+
+			<tr>
+				<th>1</th>
+				<th>Kukis</th>
+				<th>@<input type="text" name="harga" id="algoritma" size="7" value="15000" readonly></th>
+				<th>@<input type="number" name="jumlah_algoritma" id="harga_algoritma" size="7" value="0" onchange="total()"></th>
+			</tr>
+
+
+			<tr>
+				
+				<th colspan="3" style="text-align:right">jumlah total</th>
+				<th>@<input type="text" name="total_jumlah" id="total" size="7" value="" readonly></th>
+			</tr>
+		</table>
+		<br><br>
+		<input type="button" onclick="window.print()" value="cetak">
+
+		<script type="text/javascript">
+		function total() {
+		var valgoritma = 15000 * parseInt(document.getElementById('harga_algoritma').value);
+
+		var jumlah_harga = valgoritma;
+
+		document.getElementById('total').value = jumlah_harga;
+		}
+		
+		</script>
+	</div>
+</body>
+</html>
